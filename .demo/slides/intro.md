@@ -57,7 +57,7 @@ Demo Time &mdash; Elio Struyf
 
 ![](.demo/assets/session-k6bomv-qr.png)
 
-https://engagetime.live/sessions/k6bomv
+https://engagetime.live/session/k6bomv
 
 <style>
   .slide__content__inner {

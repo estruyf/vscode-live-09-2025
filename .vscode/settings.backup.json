@@ -2,7 +2,7 @@
   "editor.formatOnSave": false,
   "editor.hover.enabled": true,
   "github.copilot.nextEditSuggestions.enabled": false,
-  "workbench.colorTheme": "Demo Time Light",
+  "workbench.colorTheme": "Demo Time Dark",
   "editor.fontSize": 12,
   "terminal.integrated.fontSize": 12,
   "editor.cursorBlinking": "expand",

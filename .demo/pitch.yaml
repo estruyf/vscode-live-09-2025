@@ -7,6 +7,10 @@ demos:
     steps:
       - action: backupSettings
       - action: startEngageTimeSession
+      - action: executeScript
+        command: osascript
+        path: .demo/scripts/hide.menubar.scpt
+        id: hideBar
     disabled: false
     description: Create a backup of the settings and start Engage Time session
   - title: Intro
@@ -266,6 +270,13 @@ demos:
       - action: open
         path: .demo/pitch.yaml
     id: demo-mf6kdqt0-wm2j
+  - id: demo-mfpkg5jg-2vru
+    title: Open GitHub Copilot
+    steps:
+      - action: askCopilotChat
+      - action: typeText
+        content: Tell me a joke about Visual Studio Code
+      - action: pressEnter
   - title: Thank you
     steps:
       - action: closeEngageTimePoll
@@ -289,5 +300,10 @@ demos:
       - action: executeTerminalCommand
         command: rm app.js app.ts
       - action: restoreSettings
+      - action: executeScript
+        id: hideBar
+        path: .demo/scripts/show.menubar.scpt
+        command: osascript
 engageTime:
   sessionId: k6bomv
+timer: 60
