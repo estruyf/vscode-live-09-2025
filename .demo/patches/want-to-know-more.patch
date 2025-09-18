@@ -1,0 +1,34 @@
+Index: /want-to-know-more.md
+===================================================================
+--- /want-to-know-more.md
++++ /want-to-know-more.md
+@@ -0,0 +1,29 @@
++---
++theme: unnamed
++layout: section
++image: https://cdn.prod.website-files.com/5e9996a6531fea7d1003b18e/671d126b8181dd03367e1626_Main%20Stage-optimized.webp
++---
++
++ # Want to <b>know more</b>?
++ 
++ [demotime.show](https://demotime.show)
++ 
++ <style>
++ a {
++   background-color: #000;
++   background-image: linear-gradient(120deg, #fe2043, #6224d3 50%, #007dfe 78%,  #fe2043);
++   color: #fff !important;
++   text-decoration: none !important;
++   text-transform: uppercase;
++   border: 1px #000;
++   border-radius: 4px;
++   flex: none;
++   justify-content: center;
++   align-items: center;
++   padding: 10px;
++   font-family: Unbounded, sans-serif;
++   font-weight: 600;
++   line-height: 1.2;
++   display: inline-flex;
++ }
++ </style>

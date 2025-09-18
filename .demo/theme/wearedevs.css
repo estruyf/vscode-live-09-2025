@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Hubot+Sans:ital,wght@1,900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Hubot+Sans:ital,wght@1,900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Unbounded:wght@200..900&display=swap');
+
+.slide__content__inner {
+  h1, h2, h3 {
+    font-family: Unbounded, sans-serif;
+  }
+
+  p {
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+}
+
+.slide {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.slide__content {
+  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+h1 {
+  color: #fff !important;
+  text-align: left;
+  text-transform: capitalize;
+  max-width: 950px;
+  font-size: 36px !important;
+  font-weight: 400;
+  line-height: 1.4 !important;
+  padding: 0 !important;
+
+  &::before {
+    display: none !important;
+  }
+}
+
+h2 {
+  width: 100%;
+  text-align: left;
+}
+
+b {
+  background-color: #ffd43b;
+  color: #2d2200;
+  font-weight: normal;
+
+  &.good {
+    background-color: #76b900;
+  }
+  
+  &.blue {
+    background-color: #0078d4;
+  }
+
+  &.demotime {
+    background-color: #ffd43b;
+    color: #2d2200;
+  }
+}
+
+.slide__layout {
+  &.default {
+    h1 {
+      font-weight: normal;
+      display: inline;
+    }
+  }
+}

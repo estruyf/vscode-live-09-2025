@@ -1,0 +1,304 @@
+title: Visual Studio Code Live
+description: 'Behind the scenes of Demo Time: building better presentations and live coding in VS Code'
+version: 2
+demos:
+  - id: demo-mf3rhq6d-kj9q
+    title: Prepare
+    steps:
+      - action: backupSettings
+      - action: startEngageTimeSession
+        sessionId: 97wc0y
+    disabled: false
+    description: Create a backup of the settings and start Engage Time session
+  - title: Intro
+    steps:
+      - action: setTheme
+        theme: Demo Time Dark
+      - action: openSlide
+        path: .demo/slides/intro.md
+    icons:
+      start: vm
+      end: pass-filled
+  - title: Quick demo
+    steps:
+      - action: setTheme
+        theme: Demo Time Dark
+      - action: setSetting
+        setting:
+          key: editor.fontSize
+          value: 12
+      - action: setSetting
+        setting:
+          key: terminal.integrated.fontSize
+          value: 12
+      - action: setSetting
+        setting:
+          key: editor.hover.enabled
+          value: true
+      - action: open
+        path: demo.ts
+      - action: waitForTimeout
+        timeout: 4000
+      - action: showInfoMessage
+        message: Hey!
+      - action: waitForTimeout
+        timeout: 3000
+      - action: showInfoMessage
+        message: Did you forget me?
+      - action: waitForTimeout
+        timeout: 5000
+      - action: showInfoMessage
+        message: Hello? 👋👋👋
+  - title: Do not disturb
+    steps:
+      - action: executeVSCodeCommand
+        command: workbench.action.showCommands
+      - action: waitForTimeout
+        timeout: 2000
+      - action: typeText
+        content: toggle do not disturb
+      - action: waitForTimeout
+        timeout: 2000
+      - action: pressEnter
+      - action: executeVSCodeCommand
+        command: workbench.action.showCommands
+      - action: typeText
+        content: color theme
+      - action: pressEnter
+      - action: waitForTimeout
+        timeout: 1000
+      - action: typeText
+        content: demo time light
+      - action: pressEnter
+    id: demo-mf6gzoch-tqtc
+  - title: Correct settings
+    steps:
+      - action: setTheme
+        theme: Demo Time Light
+      - action: setSetting
+        setting:
+          key: editor.fontSize
+          value: 20
+      - action: setSetting
+        setting:
+          key: terminal.integrated.fontSize
+          value: 25
+      - action: setSetting
+        setting:
+          key: editor.hover.enabled
+          value: false
+      - action: open
+        path: demo.ts
+  - title: Does it sound familiar?
+    steps:
+      - action: setTheme
+        theme: Demo Time Dark
+      - action: startEngageTimePoll
+        sessionId: 97wc0y
+        pollId: i8dqla
+      - action: openSlide
+        path: .demo/slides/familiar.md
+    icons:
+      start: vm
+      end: pass-filled
+  - id: demo-mf6h998m-xilf
+    title: 'Poll: Have you ever had a live demo go wrong?'
+    steps:
+      - action: showEngageTimePoll
+        sessionId: 97wc0y
+        pollId: i8dqla
+  - title: Safety net for technical presentations
+    steps:
+      - action: setTheme
+        theme: Demo Time Dark
+      - action: openSlide
+        path: .demo/slides/safety-net.md
+    icons:
+      start: vm
+      end: pass-filled
+    id: demo-mf6h1a8h-kl2o
+  - id: demo-mf6i9my2-bwtm
+    title: Script overview
+    steps:
+      - action: executeVSCodeCommand
+        command: demo-time.showOverview
+      - action: closeEngageTimePoll
+        sessionId: 97wc0y
+        pollId: i8dqla
+      - action: startEngageTimePoll
+        sessionId: 97wc0y
+        pollId: fv6yh9
+  - id: demo-mf6ifj70-kp25
+    title: Scripting demos
+    steps:
+      - action: openSlide
+        path: .demo/slides/scripting.md
+  - id: demo-mf6ipq0w-yb1z
+    title: 'Poll: How do you currently prepare your demos?'
+    steps:
+      - action: showEngageTimePoll
+        sessionId: 97wc0y
+        pollId: fv6yh9
+  - id: demo-mf6iqrir-tvxz
+    title: Start writting some code
+    steps:
+      - action: setTheme
+        theme: Demo Time Light
+      - action: create
+        path: app.ts
+      - action: open
+        path: app.ts
+  - title: Add content
+    steps:
+      - action: open
+        path: app.ts
+      - action: applyPatch
+        path: app.ts
+        contentPath: .demo/snapshots/app.snapshot.ts
+        patch: .demo/patches/app.patch
+        insertTypingMode: character-by-character
+        insertTypingSpeed: 5
+      - action: save
+  - title: Highlight 1
+    steps:
+      - action: highlight
+        path: app.ts
+        position: '1:10'
+        zoom: 3
+        highlightWholeLine: true
+  - title: Highlight 2
+    steps:
+      - action: closeEngageTimePoll
+        sessionId: 97wc0y
+        pollId: fv6yh9
+      - action: unselect
+        path: app.ts
+      - action: highlight
+        path: app.ts
+        position: '12:21'
+        zoom: 3
+        highlightWholeLine: true
+  - title: 'Poll: Would automation make you more confident in presenting?'
+    steps:
+      - action: setTheme
+        theme: Demo Time Dark
+      - action: startEngageTimePoll
+        sessionId: 97wc0y
+        pollId: fvo2sv
+      - action: showEngageTimePoll
+        sessionId: 97wc0y
+        pollId: fvo2sv
+    icons:
+      start: vm
+      end: pass-filled
+  - title: Not just code
+    steps:
+      - action: setTheme
+        theme: Demo Time Dark
+      - action: openSlide
+        path: .demo/slides/use-case-2.md
+    icons:
+      start: vm
+      end: pass-filled
+    id: demo-mf6j788k-xrvv
+  - title: Open command palette
+    steps:
+      - action: executeVSCodeCommand
+        command: workbench.action.showCommands
+      - action: waitForTimeout
+        timeout: 2000
+      - action: typeText
+        content: toggle full screen
+      - action: pressEnter
+  - title: Execute VSCode commands
+    steps:
+      - action: executeVSCodeCommand
+        command: hideCustomTitleBarInFullScreen
+      - action: executeVSCodeCommand
+        command: workbench.action.hideEditorTabs
+      - action: executeVSCodeCommand
+        command: workbench.action.toggleStatusbarVisibility
+      - action: executeVSCodeCommand
+        command: demo-time.togglePresentationView
+    id: demo-mf5jrrma-rm1p
+  - title: Run terminal commands
+    steps:
+      - action: waitForTimeout
+        timeout: 1000
+      - action: executeTerminalCommand
+        command: npm run build
+        insertTypingMode: character-by-character
+  - title: Run the app
+    steps:
+      - action: executeTerminalCommand
+        command: node app.js
+        insertTypingMode: character-by-character
+      - action: closeEngageTimePoll
+        sessionId: 97wc0y
+        pollId: fvo2sv
+  - title: Slides
+    steps:
+      - action: setTheme
+        theme: Demo Time Dark
+      - action: closeTerminal
+      - action: openSlide
+        path: .demo/slides/slides.md
+    icons:
+      start: vm
+      end: pass-filled
+  - title: Open the slide
+    steps:
+      - action: setTheme
+        theme: Demo Time Light
+      - action: open
+        path: .demo/slides/slides.md
+  - title: The attendee
+    steps:
+      - action: setTheme
+        theme: Demo Time Dark
+      - action: startEngageTimePoll
+        sessionId: 97wc0y
+        pollId: l3b2zf
+      - action: openSlide
+        path: .demo/slides/attendee.md
+    id: demo-mf6jkbuh-ckng
+  - id: demo-mf6k1wbp-vjk3
+    title: 'Poll: Would you download and try a reusable demo repo afterwards?'
+    steps:
+      - action: showEngageTimePoll
+        sessionId: 97wc0y
+        pollId: l3b2zf
+  - title: What about the configuration?
+    steps:
+      - action: openSlide
+        path: .demo/slides/config.md
+    id: demo-mf6kc0dn-yqrw
+  - title: Open config
+    steps:
+      - action: open
+        path: .demo/pitch.yaml
+    id: demo-mf6kdqt0-wm2j
+  - title: Thank you
+    steps:
+      - action: closeEngageTimePoll
+        sessionId: 97wc0y
+        pollId: l3b2zf
+      - action: openSlide
+        path: .demo/slides/thank-you.md
+  - title: The end
+    steps:
+      - action: executeVSCodeCommand
+        command: workbench.action.toggleFullScreen
+      - action: executeVSCodeCommand
+        command: notifications.toggleDoNotDisturbMode
+      - action: executeVSCodeCommand
+        command: showCustomTitleBar
+      - action: executeVSCodeCommand
+        command: workbench.action.showMultipleEditorTabs
+      - action: executeVSCodeCommand
+        command: workbench.action.toggleStatusbarVisibility
+      - action: executeVSCodeCommand
+        command: demo-time.togglePresentationView
+      - action: executeTerminalCommand
+        command: rm app.js app.ts
+      - action: restoreSettings

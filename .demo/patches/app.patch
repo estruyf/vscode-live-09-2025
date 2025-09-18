@@ -1,0 +1,30 @@
+Index: /app.ts
+===================================================================
+--- /app.ts
++++ /app.ts
+@@ -0,0 +1,24 @@
++export function funnyCommitMessage(): string {
++  const messages = [
++    "Fixed the bug... or did I create a new one?",
++    "Added more coffee to the code",
++    "Refactored: Now it's even more confusing!",
++    "Merged conflicts like a pro... or not",
++    "Because why not? Open source magic!"
++  ];
++  return messages[Math.floor(Math.random() * messages.length)];
++}
++
++export function osJoke(): string {
++  const jokes = [
++    "Why did the developer go broke? Because he used up all his cache!",
++    "What's an open source project's favorite drink? GitHub Grog!",
++    "Why was the JavaScript developer sad? Because he didn't know how to 'null' his feelings.",
++    "How do you comfort a JavaScript bug? You console it.",
++    "Why did the code go to therapy? It had too many unresolved issues."
++  ];
++  return jokes[Math.floor(Math.random() * jokes.length)];
++}
++
++console.log(funnyCommitMessage());
++console.log(osJoke());
+\ No newline at end of file

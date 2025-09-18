@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "Demo Time": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@demotime/mcp"]
+    }
+  }
+}
