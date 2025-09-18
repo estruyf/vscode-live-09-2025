@@ -3,11 +3,13 @@ theme: default
 layout: intro
 ---
 
-# Open Source Friday with Demo Time &mdash; A VS Code extension
+# VS Code Live - Behind the scenes of Demo Time: building better presentations and live coding in VS Code
 
 Demo Time &mdash; Elio Struyf
 
-![](.demo/assets/featured-v3-new-releases.svg)
+<div class="bg-video-bg" aria-hidden="true">
+  <video autoplay loop muted playsinline preload="auto" src="https://file+.vscode-resource.vscode-cdn.net/Users/eliostruyf/Developer/demotime/demo-time-vscode/.demo/assets/vscode.mp4"></video>
+</div>
 
 <style>
   .slide__content__inner {
@@ -18,12 +20,33 @@ Demo Time &mdash; Elio Struyf
     }
     
     p {
-      font-family: Monaspace Neon, monospace !important;
       text-transform: uppercase;
       font-weight: 100;
     }
 
     img { width: 100%; }
+  }
+
+  /* Full-slide background video */
+  .bg-video-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .bg-video-bg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(0.65); /* dim the video so foreground text stays readable */
   }
 </style>
 
@@ -32,9 +55,9 @@ Demo Time &mdash; Elio Struyf
 
 # Let us make it interactive
 
-![](.demo/assets/session-97wc0y-qr.png)
+![](.demo/assets/session-k6bomv-qr.png)
 
-https://engagetime.live/sessions/97wc0y
+https://engagetime.live/sessions/k6bomv
 
 <style>
   .slide__content__inner {

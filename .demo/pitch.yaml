@@ -7,7 +7,6 @@ demos:
     steps:
       - action: backupSettings
       - action: startEngageTimeSession
-        sessionId: 97wc0y
     disabled: false
     description: Create a backup of the settings and start Engage Time session
   - title: Intro
@@ -94,8 +93,7 @@ demos:
       - action: setTheme
         theme: Demo Time Dark
       - action: startEngageTimePoll
-        sessionId: 97wc0y
-        pollId: i8dqla
+        pollId: bgtc4p
       - action: openSlide
         path: .demo/slides/familiar.md
     icons:
@@ -105,8 +103,7 @@ demos:
     title: 'Poll: Have you ever had a live demo go wrong?'
     steps:
       - action: showEngageTimePoll
-        sessionId: 97wc0y
-        pollId: i8dqla
+        pollId: bgtc4p
   - title: Safety net for technical presentations
     steps:
       - action: setTheme
@@ -123,11 +120,9 @@ demos:
       - action: executeVSCodeCommand
         command: demo-time.showOverview
       - action: closeEngageTimePoll
-        sessionId: 97wc0y
-        pollId: i8dqla
+        pollId: bgtc4p
       - action: startEngageTimePoll
-        sessionId: 97wc0y
-        pollId: fv6yh9
+        pollId: jlm9uk
   - id: demo-mf6ifj70-kp25
     title: Scripting demos
     steps:
@@ -137,8 +132,7 @@ demos:
     title: 'Poll: How do you currently prepare your demos?'
     steps:
       - action: showEngageTimePoll
-        sessionId: 97wc0y
-        pollId: fv6yh9
+        pollId: jlm9uk
   - id: demo-mf6iqrir-tvxz
     title: Start writting some code
     steps:
@@ -169,8 +163,7 @@ demos:
   - title: Highlight 2
     steps:
       - action: closeEngageTimePoll
-        sessionId: 97wc0y
-        pollId: fv6yh9
+        pollId: jlm9uk
       - action: unselect
         path: app.ts
       - action: highlight
@@ -183,11 +176,9 @@ demos:
       - action: setTheme
         theme: Demo Time Dark
       - action: startEngageTimePoll
-        sessionId: 97wc0y
-        pollId: fvo2sv
+        pollId: v6l5f3
       - action: showEngageTimePoll
-        sessionId: 97wc0y
-        pollId: fvo2sv
+        pollId: v6l5f3
     icons:
       start: vm
       end: pass-filled
@@ -234,8 +225,7 @@ demos:
         command: node app.js
         insertTypingMode: character-by-character
       - action: closeEngageTimePoll
-        sessionId: 97wc0y
-        pollId: fvo2sv
+        pollId: v6l5f3
   - title: Slides
     steps:
       - action: setTheme
@@ -257,8 +247,7 @@ demos:
       - action: setTheme
         theme: Demo Time Dark
       - action: startEngageTimePoll
-        sessionId: 97wc0y
-        pollId: l3b2zf
+        pollId: 813bbp
       - action: openSlide
         path: .demo/slides/attendee.md
     id: demo-mf6jkbuh-ckng
@@ -266,8 +255,7 @@ demos:
     title: 'Poll: Would you download and try a reusable demo repo afterwards?'
     steps:
       - action: showEngageTimePoll
-        sessionId: 97wc0y
-        pollId: l3b2zf
+        pollId: 813bbp
   - title: What about the configuration?
     steps:
       - action: openSlide
@@ -281,8 +269,7 @@ demos:
   - title: Thank you
     steps:
       - action: closeEngageTimePoll
-        sessionId: 97wc0y
-        pollId: l3b2zf
+        pollId: 813bbp
       - action: openSlide
         path: .demo/slides/thank-you.md
   - title: The end
@@ -302,3 +289,5 @@ demos:
       - action: executeTerminalCommand
         command: rm app.js app.ts
       - action: restoreSettings
+engageTime:
+  sessionId: k6bomv

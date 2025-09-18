@@ -3,18 +3,19 @@
   "editor.hover.enabled": false,
   "github.copilot.nextEditSuggestions.enabled": false,
   "workbench.colorTheme": "Demo Time Dark",
-  "editor.fontSize": 16,
-  "terminal.integrated.fontSize": 16,
+  "editor.fontSize": 20,
+  "terminal.integrated.fontSize": 25,
   "editor.cursorBlinking": "expand",
   "demoTime.highlightBorderColor": "transparent",
   "demoTime.highlightBackground": "rgba(19, 142, 151, 0.2)",
   "demoTime.highlightOpacity": 0.5,
   "demoTime.highlightBlur": 2,
-  "demoTime.customTheme": ".demo/theme/github.css",
+  "demoTime.customTheme": ".demo/theme/vscode.css",
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#ffd43b"
   },
   "workbench.statusBar.visible": true,
   "workbench.editor.showTabs": "multiple",
-  "workbench.activityBar.location": "default"
+  "workbench.activityBar.location": "default",
+  "demoTime.highlightZoomEnabled": 5
 }

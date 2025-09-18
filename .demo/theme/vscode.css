@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.slide {
+  background-color: #0d1117 !important;
+  color: #b1bac4;
+}
+
+.slide__content__inner {
+  background-color: #0d1117 !important;
+
+  h1, h2, h3 {
+    font-family: Roboto !important;
+    font-weight: 900 !important;
+    color: #fff;
+    /* background: transparent !important; */
+  }
+
+  li, p {
+    font-family: "Mona Sans", sans-serif;
+    font-weight: 200;
+  }
+}
+
+.slide__layout.default  {
+  position: relative;
+  overflow: hidden;
+
+  /* make inner content transparent so the layout background is visible */
+  .slide__content__inner {
+    background: #0d1117 !important;
+    border-radius: 6px;
+    position: absolute;
+    inset: 1em;
+    z-index: 1;
+    width: calc(100% - 2em);
+    height: calc(100% - 2em);
+    box-shadow: 0 20px 50px rgba(2,8,23,0.6), 0 6px 18px rgba(2,8,23,0.45), inset 0 1px 0 rgba(255,255,255,0.02);
+  }
+
+  /* layered soft glows to mimic the image */
+  background: #142C54 !important;
+  background: linear-gradient(140deg,rgba(20, 44, 84, 1) 0%, rgba(34, 81, 169, 1) 50%, rgba(50, 95, 100, 1) 100%) !important;
+
+  /* subtle vignette around edges */
+  outline: 1px solid rgba(255,255,255,0.01);
+  border-radius: 6px;
+
+  li {
+    font-size: 1.5em !important;
+  }
+
+  p {
+    font-size: 1.25em !important;
+  }
+}
+
+.slide__layout.section {
+  h1 {
+    background: url('.demo/assets/copilot-free-banner-bg-dark.webp') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    padding: .25em 1em !important;
+    border-radius: 6px !important;
+  }
+}
+
+.slide__layout.image {
+  .slide__content__inner {
+    background: none !important;
+  }
+}
